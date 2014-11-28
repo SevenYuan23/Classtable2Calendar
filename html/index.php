@@ -111,10 +111,10 @@
 				}
 				$reminder->setOverrides($user_reminder);
 				$class->setReminders($reminder);
-			}
 
 				$created_event=$service->events->insert($calendar_id,$class);
 				echo $created_event->getId();
+			}
 			
 		}
 	}else{
