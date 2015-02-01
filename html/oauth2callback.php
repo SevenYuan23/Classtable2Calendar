@@ -5,7 +5,7 @@
 
 	$client=new Google_Client();
 	$client->setAuthConfigFile('/home/sevenyuan/client_secret.json');
-	$client->setRedirectUri("http://classtable.com/oauth2callback.php");
+	$client->setRedirectUri("http://class2cal.sevenyuan23.me/oauth2callback.php");
 	$client->addScope('https://www.googleapis.com/auth/calendar');
 
 	if(! isset($_GET['code'])){
@@ -14,7 +14,7 @@
 	}else{
 		$client->authenticate($_GET['code']);
 		$_SESSION['access_token']=$client->getAccessToken();
-		$redirect_uri="http://classtable.com/";
+		$redirect_uri="http://class2cal.sevenyuan23.me/";
 		header('Location:'.filter_var($redirect_uri,FILTER_SANITIZE_URL));
 	}
 ?>

@@ -1,0 +1,93 @@
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Droid Sans'), local('DroidSans'), url(../font/DroidSans.woff) format('woff');
+}
+@font-face {
+  font-family: 'Droid Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Droid Sans Bold'), local('DroidSans-Bold'), url(../font/DroidSansBold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Slab Light'), local('RobotoSlab-Light'), url(../font/RobotoSlabLight.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(../font/RobotoSlabRegular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url(../font/RobotoSlabBold.woff) format('woff');
+}
+
+body{background: #999999;}
+
+#wrap_body{
+  background: #ffffff;
+  width:1020px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  overflow: hidden;
+  font-weight: 300;
+  font-family: 'Roboto Slab',sans-serif;
+}
+
+#wrap-header{background: #76D2C5;margin:30px;height: 200px;}
+
+header #wrap-header h1{
+  font-size: 60px;
+  text-align: center;
+  color: #ffffff;
+  line-height: 200px;
+}
+
+#set_content{
+  
+  width: 550px;
+  font-size: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  border: 1px solid #EEEEEE;
+  padding: 30px;
+}
+
+#set_content input[type="text"]{  
+  border:1px solid #B3D6EF;　  
+  background:#ffffff;
+  height: 30px;
+  vertical-align: middle; 
+  font-size: 25px;
+}
+#set_content select{  
+  border:1px solid #B3D6EF;　  
+  background:#ffffff;
+  height: 30px;
+  vertical-align: middle; 
+  font-size: 20px;
+  text-align: center;
+}
+#set_content td{
+	text-align:center;
+}
+
+#classtime{
+  width: 318px;
+  font-size: 23px;
+  float: left;
+  border: 1px solid #EEEEEE;
+  text-align:center;
+  padding-top:30px;
+  padding-bottom:30px;
+}
+.floatleft{float: left;}

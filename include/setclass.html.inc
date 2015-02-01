@@ -22,23 +22,31 @@
 	$i=0;
 
 ?>
+<!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Classtable2Calendar</title>
+	<link rel="stylesheet" type="text/css"href="../css/style.css">
 </head>
 <body>
-	<h1><font size=7>Set your class</font></h1>
-	<hr/>
+	<div id="wrap_body">
+		<header>
+		<div id="wrap-header">
+			<h1>Set your Class</h1>
+		</div>
+		</header>
 	<form action="<?php $_SERVER['PHP_SELF'] ?>"method='post'>
-		课程名称:<input type='text'name='class_name'><br/>
-		课程地点:<input type='text'name='class_location'><br/>
-		主讲教师:<input type='text'name='teacher'><br/>
+	<div id="set_content"class="floatleft">
+		课程名称: <input type='text'name='class_name'><br/>
+		课程地点: <input type='text'name='class_location'><br/>
+		主讲教师: <input type='text'name='teacher'><br/>
 		上课时间:<br/>
 		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		周数:<input type='text'size=1 name='week_start'>
-		到<input type='text'size=1 name='week_end'>	
-		除<input type='text'size=5 name='week_exp'><br/>
-		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp星期几:
+		到 <input type='text'size=1 name='week_end'>	
+		除 <input type='text'size=10 name='week_exp'><br/>
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 星期几:
 		<select name='days'>
 			<option value=0>星期日</option>
 			<option value=1>星期一</option>
@@ -58,7 +66,7 @@
 			<option value=5>11~12</option>
 		</select>
 		<br/>
-		日历:<select name='calendar_id'>
+		日历: <select name='calendar_id'>
 			<?php
 			for($j=0;$j<$nums_of_calendar;$j++){
 				echo '<option value='.$calendar_id[$j].'>'
@@ -67,39 +75,53 @@
 			?>
 		</select><br/>
 		颜色:<br/>
-		<table border=1>
-		<tr>
-			<?php
-			for($i=0;$i<$nums_of_color;$i++){
-				echo'<td width=\'10\'bgcolor=\''.$colorHex[$i].'\'>color</td>';
-			}
-			?>
-		</tr>
+		<table>
 		<tr>
 			<?php
 			for($i=0;$i<$nums_of_color;$i++){
 				$a=$i+1;
-				echo'<td align=\'center\'>
-					<input type=\'radio\'name=\'color\'value='.$a.'></td>';
+				echo'<td width=\'30px\'bgcolor=\''.$colorHex[$i].'\'>
+					 <input type=\'radio\'name=\'color\'value='.$a.'>
+				</td>';
 			}
 			?>
 		</tr>
 		</table>
 		通知:<input type='checkbox'name='reminder[]'value='email'checked>
 		<input type='text'name='email'value='30'size=1
-		>minutes before as 电子邮件<br/>
+		> minutes before as 邮件<br/>
 		
-		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<input type='checkbox'name='reminder[]'value='sms'checked>
 		<input type='text'name='sms'value='30'size=1
-		>minutes before as 短信<br/>
+		> minutes before as 短信<br/>
 		
-		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 		<input type='checkbox'name='reminder[]'value='popup'checked>
 		<input type='text'name='popup'value='30'size=1
-		>minutes before as 弹窗<br/>
+		> minutes before as 弹窗<br/>
 		<input type='submit'value='添加'>
+	</div>
 	</form>
+	<div id="classtime"class="floatleft">
+	1~2节课:<br/>
+	8:00~9:40<br/>
+	3~4节课:<br/>
+	10:10~11:50<br/>
+	5~6节课:<br/>
+	秋:14:00~15:35<br/>
+	夏:14:30~16:05<br/>
+	7~8节课<br/>
+	秋:15:55~17:30<br/>
+	夏:16:25~18:00<br/>
+	9~10节课:<br/>
+	秋:18:30~20:05<br/>
+	夏:19:00~20:35<br/>
+	10~11节课:<br/>
+	秋:20:15~21:50<br/>
+	夏:20:45~22:20
+	</div>
+</div>
 </body>
 </html>
 <?php

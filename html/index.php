@@ -2,7 +2,7 @@
 	function week2date($week,$day){
 		$days=($week-1)*7+$day;
 		$months=array(31,28,31,30,31,30,31,31,30,31,30,31);
-		$yy=2014;$mm=8;$dd=31;
+		$yy=2015;$mm=3;$dd=1;
 		while($days>0){
 			$dd++;
 			if($dd>$months[$mm-1]){
@@ -33,6 +33,8 @@
 	$client->addScope('https://www.googleapis.com/auth/calendar');
 
 	if(isset($_SESSION['access_token'])&&$_SESSION['access_token']){
+			//file_put_contents("../temp/access_token.json",$_SESSION['access_token']);
+			
 			$client->setAccessToken($_SESSION['access_token']);
 			$service=new Google_Service_Calendar($client);
 
